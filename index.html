@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<header class="header">
+<div>
+<h1>🌤️ Weather Dashboard</h1>
+<p>Check current weather and 5-day forecast</p>
+</div>
+<button id="themeBtn" class="theme-btn">🌙 Dark</button>
+</header>
+
+<section class="search-section">
+<div class="search-box">
+<input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off">
+<button id="searchBtn">Search</button>
+</div>
+<div id="suggestions" class="suggestions"></div>
+</section>
+
+<div id="loading" class="loading">
+<div class="spinner"></div>
+<p>Loading weather...</p>
+</div>
+
+<div id="errorMsg" class="error-message"></div>
+
+<section id="weatherCard" class="weather-card">
+<div class="weather-main">
+<div class="location">
+<h2 id="cityName">City Name</h2>
+<p id="weatherDescription">Weather description</p>
+</div>
+<div class="temperature">
+<span id="temperature">--°C</span>
+<p>Feels like <span id="feelsLike">--°C</span></p>
+</div>
+</div>
+
+<div class="weather-details">
+<div class="detail-card">
+<span class="detail-icon">💧</span>
+<div>
+<p>Humidity</p>
+<strong id="humidity">--%</strong>
+</div>
+</div>
+
+<div class="detail-card">
+<span class="detail-icon">💨</span>
+<div>
+<p>Wind Speed</p>
+<strong id="windSpeed">-- m/s</strong>
+</div>
+</div>
+
+<div class="detail-card">
+<span class="detail-icon">🌡️</span>
+<div>
+<p>Temperature</p>
+<strong id="detailTemp">--°C</strong>
+</div>
+</div>
+</div>
+
+<button id="favoriteBtn" class="favorite-btn">⭐ Add to Favorites</button>
+</section>
+
+<section id="forecastSection" class="forecast-section">
+<h2>📅 5-Day Forecast</h2>
+<div id="forecast" class="forecast"></div>
+</section>
+
+<section class="favorites-section">
+<div class="section-title">
+<h2>⭐ Favorite Cities</h2>
+</div>
+<div id="favoritesList" class="favorites-list">
+<p class="empty-favorites">No favorite cities yet.</p>
+</div>
+</section>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+```
